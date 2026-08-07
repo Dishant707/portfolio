@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: oklch(0.52 0.16 65);
+  --color-primary-light: oklch(0.68 0.12 60);
+  --color-accent: oklch(0.58 0.19 50);
+  --color-surface: oklch(0.98 0.01 80);
+  --color-muted: oklch(0.75 0.02 70);
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+body {
+  font-family: var(--font-body);
+  background: #0d0d0d;
+  color: oklch(0.25 0.02 60);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Full-screen snap section */
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Section overlays - dark so image shows through */
+.section-overlay-light {
+  background: oklch(0.18 0.03 60 / 0.78);
+}
+
+.section-overlay-medium {
+  background: oklch(0.15 0.03 50 / 0.82);
+}
+
+.section-overlay-dark {
+  background: oklch(0.12 0.02 50 / 0.92);
+}
+
+/* Fade-in animation for section headings */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Floating leaves animation */
+@keyframes floatLeaf {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.25; }
+  90% { opacity: 0.2; }
+  100% { transform: translateY(-120vh) translateX(40px) rotate(180deg); opacity: 0; }
+}
+
+.animate-float-leaf {
+  animation: floatLeaf 12s linear infinite;
+}
+
+/* Orbiting spin animations */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 25s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spinReverse 25s linear infinite;
+}
+
+/* Pulse glow */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Slower spin for outer ring */
+@keyframes spinSlower {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slower {
+  animation: spinSlower 40s linear infinite;
+}
+
+/* Faster spin for tiny dots */
+@keyframes spinFaster {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.animate-spin-faster {
+  animation: spinFaster 15s linear infinite;
+}
+
+::selection {
+  background: oklch(0.58 0.19 50 / 0.3);
+  color: oklch(0.25 0.02 60);
+}
+
+/* Glass effect utility */
+.glass {
+  background: oklch(1 0 0 / 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid oklch(0 0 0 / 0.06);
+}
+
+/* Gradient overlay for hero */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    oklch(0.15 0.02 50 / 0.45) 0%,
+    oklch(0.2 0.03 55 / 0.2) 50%,
+    oklch(0.1 0.02 45 / 0.55) 100%
+  );
+}
+
+/* Text balance for headings */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
