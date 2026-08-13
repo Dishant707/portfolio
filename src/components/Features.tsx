@@ -1,6 +1,7 @@
 import { Dna, Microscope, Code2, Database, BarChart3, Globe } from "lucide-react";
 import { motion } from "motion/react";
 import FloatingParticles from "./FloatingParticles";
+import SandWaves from "./SandWaves";
 
 const skills = [
   { icon: Dna, title: "Genomic" },
@@ -21,20 +22,14 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills" className="snap-section">
-      {/* Animated background */}
-      <div className="absolute inset-0">
-        <motion.div
-          animate={{ scale: [1, 1.04, 1], x: ["0%", "-1%", "0%"] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }}
-          className="w-full h-full"
-        >
-          <img src="/hero.jpg" alt="" className="w-full h-full object-cover" loading="lazy" />
-        </motion.div>
-        <div className="absolute inset-0 section-overlay-light" />
-      </div>
+      {/* Desert gradient background */}
+      <div className="absolute inset-0 section-overlay-light" />
 
       {/* Floating particles */}
       <FloatingParticles />
+
+      {/* Flowing sand waves */}
+      <SandWaves />
 
       {/* Subtle mist at bottom */}
       <motion.div
@@ -128,26 +123,6 @@ export default function Skills() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Floating leaves — enhanced */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        {[...Array(10)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute animate-float-leaf"
-            style={{
-              left: `${5 + Math.random() * 85}%`,
-              top: `${Math.random() * 90}%`,
-              animationDelay: `${i * 1.8}s`,
-              animationDuration: `${8 + Math.random() * 7}s`,
-              fontSize: `${10 + Math.random() * 10}px`,
-              opacity: 0.1 + Math.random() * 0.15,
-            }}
-          >
-            {['🍂', '🍁', '🌿', '✨', '🌾'][i % 5]}
-          </div>
-        ))}
       </div>
     </section>
   );

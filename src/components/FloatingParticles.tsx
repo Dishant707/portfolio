@@ -36,12 +36,12 @@ export default function FloatingParticles() {
     const spawnParticle = (): Particle => ({
       x: Math.random() * w,
       y: Math.random() * h,
-      size: Math.random() * 2.5 + 0.5,
-      speedX: (Math.random() - 0.5) * 0.3,
-      speedY: -Math.random() * 0.4 - 0.1,
+      size: Math.random() * 2 + 0.4,
+      speedX: 0.15 + Math.random() * 0.35, // slow wind drift
+      speedY: (Math.random() - 0.5) * 0.15, // gentle vertical bob
       opacity: 0,
       life: 0,
-      maxLife: Math.random() * 400 + 200,
+      maxLife: Math.random() * 600 + 300,
     });
 
     const init = () => {
@@ -57,7 +57,7 @@ export default function FloatingParticles() {
       ctx.clearRect(0, 0, w, h);
 
       // Spawn new particles if needed
-      if (particles.length < 50) {
+      if (particles.length < 40) {
         particles.push(spawnParticle());
       }
 
@@ -88,16 +88,16 @@ export default function FloatingParticles() {
         if (p.x > w + 10) p.x = -10;
         if (p.y < -10) p.y = h + 10;
 
-        const alpha = p.opacity * 0.5;
+        const alpha = p.opacity * 0.45;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255,210,140,${alpha})`;
+        ctx.fillStyle = `rgba(225,185,140,${alpha})`;
         ctx.fill();
 
-        // Glow
+        // Soft glow
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size * 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255,180,100,${alpha * 0.15})`;
+        ctx.arc(p.x, p.y, p.size * 2.2, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(200,150,95,${alpha * 0.12})`;
         ctx.fill();
       }
 

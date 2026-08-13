@@ -41,17 +41,23 @@ body {
   justify-content: center;
 }
 
-/* Section overlays - dark so image shows through */
+/* Section backgrounds — warm desert sand + bluish vignette bottom edge */
 .section-overlay-light {
-  background: oklch(0.18 0.03 60 / 0.78);
+  background:
+    radial-gradient(ellipse 90% 55% at 50% 0%, rgba(245,182,120,0.25) 0%, transparent 70%),
+    linear-gradient(180deg, #9a6638 0%, #7a4e2a 45%, #543a26 78%, #2c2930 100%);
 }
 
 .section-overlay-medium {
-  background: oklch(0.15 0.03 50 / 0.82);
+  background:
+    radial-gradient(ellipse 90% 55% at 50% 0%, rgba(230,160,100,0.2) 0%, transparent 70%),
+    linear-gradient(180deg, #7a4e2a 0%, #5a3820 45%, #3d2818 78%, #26232b 100%);
 }
 
 .section-overlay-dark {
-  background: oklch(0.12 0.02 50 / 0.92);
+  background:
+    radial-gradient(ellipse 90% 55% at 50% 0%, rgba(200,130,70,0.15) 0%, transparent 70%),
+    linear-gradient(180deg, #55331d 0%, #3d2714 45%, #291a10 78%, #1c1a21 100%);
 }
 
 /* Fade-in animation for section headings */
@@ -74,6 +80,12 @@ body {
 
 .animate-float-leaf {
   animation: floatLeaf 12s linear infinite;
+}
+
+/* Flowing sand waves */
+@keyframes sandDrift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 /* Orbiting spin animations */

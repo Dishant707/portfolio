@@ -1,22 +1,17 @@
 import { motion } from "motion/react";
 import FloatingParticles from "./FloatingParticles";
+import SandWaves from "./SandWaves";
 
 export default function About() {
   return (
     <section id="about" className="snap-section">
-      {/* Animated background */}
-      <div className="absolute inset-0">
-        <motion.div
-          animate={{ scale: [1, 1.04, 1], x: ["0%", "-1.5%", "0%"] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }}
-          className="w-full h-full"
-        >
-          <img src="/hero.jpg" alt="" className="w-full h-full object-cover" loading="lazy" />
-        </motion.div>
-        <div className="absolute inset-0 section-overlay-medium" />
-      </div>
+      {/* Desert gradient background */}
+      <div className="absolute inset-0 section-overlay-medium" />
 
       {/* Particles */}
+
+      {/* Flowing sand waves */}
+      <SandWaves />
       <FloatingParticles />
 
       {/* Mist */}

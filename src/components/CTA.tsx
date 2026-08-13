@@ -1,23 +1,18 @@
 import { motion } from "motion/react";
 import { ArrowRight, Mail, MapPin, Linkedin, Github } from "lucide-react";
 import FloatingParticles from "./FloatingParticles";
+import SandWaves from "./SandWaves";
 
 export default function Connect() {
   return (
     <section id="connect" className="snap-section">
-      {/* Animated background */}
-      <div className="absolute inset-0">
-        <motion.div
-          animate={{ scale: [1, 1.05, 1], x: ["0%", "1%", "0%"] }}
-          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut", repeatType: "reverse" }}
-          className="w-full h-full"
-        >
-          <img src="/hero.jpg" alt="" className="w-full h-full object-cover" loading="lazy" />
-        </motion.div>
-        <div className="absolute inset-0 section-overlay-dark" />
-      </div>
+      {/* Desert gradient background */}
+      <div className="absolute inset-0 section-overlay-dark" />
 
       {/* Particles */}
+
+      {/* Flowing sand waves */}
+      <SandWaves />
       <FloatingParticles />
 
       {/* Mist */}
