@@ -1,0 +1,182 @@
+{
+  "cardiovascular": {
+    "arteries": {
+      "file": "parts/cardiovascular/arteries.glb",
+      "elements": 619,
+      "label": "Arteries"
+    },
+    "heart": {
+      "file": "parts/cardiovascular/heart.glb",
+      "elements": 24,
+      "label": "Heart"
+    },
+    "veins": {
+      "file": "parts/cardiovascular/veins.glb",
+      "elements": 385,
+      "label": "Veins"
+    }
+  },
+  "organs": {
+    "digestive": {
+      "file": "parts/organs/digestive.glb",
+      "elements": 94,
+      "label": "Digestive"
+    },
+    "endocrine": {
+      "file": "parts/organs/endocrine.glb",
+      "elements": 4,
+      "label": "Endocrine"
+    },
+    "liver_gallbladder_pancreas_spleen": {
+      "file": "parts/organs/liver_gallbladder_pancreas_spleen.glb",
+      "elements": 21,
+      "label": "Liver, pancreas & spleen"
+    },
+    "other": {
+      "file": "parts/organs/other.glb",
+      "elements": 190,
+      "label": "Skin & connective tissue"
+    },
+    "reproductive": {
+      "file": "parts/organs/reproductive.glb",
+      "elements": 10,
+      "label": "Reproductive"
+    },
+    "respiratory": {
+      "file": "parts/organs/respiratory.glb",
+      "elements": 105,
+      "label": "Respiratory"
+    },
+    "urinary": {
+      "file": "parts/organs/urinary.glb",
+      "elements": 8,
+      "label": "Urinary"
+    }
+  },
+  "skeletal": {
+    "cartilage": {
+      "file": "parts/skeletal/cartilage.glb",
+      "elements": 9,
+      "label": "Cartilage"
+    },
+    "clavicle": {
+      "file": "parts/skeletal/clavicle.glb",
+      "elements": 2,
+      "label": "Clavicle"
+    },
+    "femur": {
+      "file": "parts/skeletal/femur.glb",
+      "elements": 2,
+      "label": "Femur"
+    },
+    "foot": {
+      "file": "parts/skeletal/foot.glb",
+      "elements": 58,
+      "label": "Foot"
+    },
+    "forearm": {
+      "file": "parts/skeletal/forearm.glb",
+      "elements": 4,
+      "label": "Forearm"
+    },
+    "hand": {
+      "file": "parts/skeletal/hand.glb",
+      "elements": 54,
+      "label": "Hand"
+    },
+    "humerus": {
+      "file": "parts/skeletal/humerus.glb",
+      "elements": 2,
+      "label": "Humerus"
+    },
+    "lower_leg": {
+      "file": "parts/skeletal/lower_leg.glb",
+      "elements": 4,
+      "label": "Lower Leg"
+    },
+    "mandible": {
+      "file": "parts/skeletal/mandible.glb",
+      "elements": 1,
+      "label": "Mandible"
+    },
+    "patella": {
+      "file": "parts/skeletal/patella.glb",
+      "elements": 2,
+      "label": "Patella"
+    },
+    "pelvis": {
+      "file": "parts/skeletal/pelvis.glb",
+      "elements": 2,
+      "label": "Pelvis"
+    },
+    "ribcage": {
+      "file": "parts/skeletal/ribcage.glb",
+      "elements": 39,
+      "label": "Ribcage"
+    },
+    "scapula": {
+      "file": "parts/skeletal/scapula.glb",
+      "elements": 2,
+      "label": "Scapula"
+    },
+    "skull": {
+      "file": "parts/skeletal/skull.glb",
+      "elements": 26,
+      "label": "Skull"
+    },
+    "spine": {
+      "file": "parts/skeletal/spine.glb",
+      "elements": 48,
+      "label": "Spine"
+    }
+  },
+  "muscular": {
+    "head_neck": {
+      "file": "parts/muscular/head_neck.glb",
+      "elements": 81,
+      "label": "Head & neck muscles"
+    },
+    "lower_limb": {
+      "file": "parts/muscular/lower_limb.glb",
+      "elements": 102,
+      "label": "Lower limb muscles"
+    },
+    "muscles": {
+      "file": "parts/muscular/muscles.glb",
+      "elements": 14,
+      "label": "Muscles"
+    },
+    "trunk": {
+      "file": "parts/muscular/trunk.glb",
+      "elements": 96,
+      "label": "Trunk"
+    },
+    "upper_limb": {
+      "file": "parts/muscular/upper_limb.glb",
+      "elements": 110,
+      "label": "Upper limb muscles"
+    }
+  },
+  "nervous": {
+    "brain": {
+      "file": "parts/nervous/brain.glb",
+      "elements": 81,
+      "label": "Brain"
+    },
+    "cranial_nerves": {
+      "file": "parts/nervous/cranial_nerves.glb",
+      "elements": 6,
+      "label": "Cranial nerves"
+    },
+    "nerves": {
+      "file": "parts/nervous/nerves.glb",
+      "elements": 28,
+      "label": "Nerves"
+    },
+    "spinal_cord": {
+      "file": "parts/nervous/spinal_cord.glb",
+      "elements": 1,
+      "label": "Spinal cord"
+    }
+  }
+}

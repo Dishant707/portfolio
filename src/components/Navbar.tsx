@@ -6,6 +6,8 @@ const links = [
   { href: "#home", label: "Home" },
   { href: "#skills", label: "Skills" },
   { href: "#about", label: "Work" },
+  { href: "#projects", label: "Projects" },
+  { href: "#atlas", label: "Atlas" },
   { href: "#connect", label: "Connect" },
 ];
 
@@ -29,7 +31,7 @@ export default function Navbar() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-          className="fixed top-0 left-0 right-0 z-50 bg-transparent py-5"
+          className="fixed top-0 left-0 right-0 z-50 bg-transparent py-3"
         >
       <div className="w-full px-6 flex items-center justify-between">
         <a
@@ -38,8 +40,8 @@ export default function Navbar() {
         >
           {/* DNA Helix Logo */}
           <svg
-            width="32"
-            height="32"
+            width="26"
+            height="26"
             viewBox="0 0 48 48"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -80,12 +82,12 @@ export default function Navbar() {
         </a>
 
         {/* Desktop links — show from 640px */}
-        <div className="hidden sm:flex items-center gap-8">
+        <div className="hidden sm:flex items-center gap-6">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium tracking-wide text-white/90 hover:text-white transition-colors duration-200"
+              className="text-[13px] font-medium tracking-wide text-white/90 hover:text-white transition-colors duration-200"
             >
               {link.label}
             </a>
